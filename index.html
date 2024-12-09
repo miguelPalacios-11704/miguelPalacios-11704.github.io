@@ -132,6 +132,7 @@
             padding: 80px 20px;
             max-width: 1000px;
             margin: 0 auto;
+            position: relative;
         }
 
         section h2 {
@@ -143,12 +144,50 @@
             padding-bottom: 5px;
         }
 
+        /* Parallax Section */
+        .parallax {
+            height: 60vh;
+            background: url('https://source.unsplash.com/1600x900/?mountains,sunset') no-repeat center center/cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .parallax::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+
+        .parallax h2 {
+            color: #ffd700;
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .parallax p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
         /* Sobre Mí */
         #sobre-mi {
             background: url('https://source.unsplash.com/1600x900/?clouds') no-repeat center center/cover;
             background-attachment: fixed;
             color: #fff;
-            position: relative;
         }
 
         #sobre-mi::before {
@@ -323,6 +362,17 @@
         </div>
     </section>
 
+    <!-- Parallax Section: Montañas con Atardecer -->
+    <section class="parallax">
+        <div class="parallax-content">
+            <h2>La belleza de las montañas al atardecer</h2>
+            <p>
+                Siluetas de montañas que se funden con el cielo en un delicado lienzo de colores,<br>
+                recordándonos la grandeza y serenidad de la naturaleza.
+            </p>
+        </div>
+    </section>
+
     <!-- Sobre Mí -->
     <section id="sobre-mi">
         <div class="content">
@@ -402,4 +452,5 @@
 
 </body>
 </html>
+
 
