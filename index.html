@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <title>Mi Carta de Presentación</title>
-    
-    <!-- CDN de Tailwind CSS -->
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
-    
-    <!-- Puedes agregar una fuente externa para mayor profesionalismo -->
+    <!-- Fuente personalizada -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" 
-      rel="stylesheet"
-    >
+      rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -23,53 +19,76 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+
     <!-- NAVBAR -->
-    <header class="bg-white shadow">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             <a href="#" class="text-xl font-bold text-gray-900 hover:text-blue-600">
                 Tu Nombre
             </a>
-            <nav class="space-x-6 hidden md:block">
-                <a href="#sobre-mi" class="hover:text-blue-600 transition">Sobre Mí</a>
-                <a href="#intereses-logros" class="hover:text-blue-600 transition">Intereses & Logros</a>
-                <a href="#proyectos" class="hover:text-blue-600 transition">Proyectos</a>
-                <a href="#cv" class="hover:text-blue-600 transition">CV</a>
+            <nav class="space-x-4 hidden md:flex">
+                <a href="#sobre-mi" class="text-gray-600 hover:text-blue-600 font-medium">Sobre Mí</a>
+                <a href="#intereses-logros" class="text-gray-600 hover:text-blue-600 font-medium">Intereses & Logros</a>
+                <a href="#proyectos" class="text-gray-600 hover:text-blue-600 font-medium">Proyectos</a>
+                <a href="#cv" class="text-gray-600 hover:text-blue-600 font-medium">CV</a>
             </nav>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20" id="presentacion">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Hola, soy <span class="text-yellow-300">Tu Nombre Completo</span></h1>
-            <p class="max-w-2xl mx-auto text-xl md:text-2xl font-light">
+    <section class="relative bg-gray-800 text-white" id="presentacion">
+        <!-- Imagen de fondo: puedes cambiar la URL por la que desees -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60" 
+             style="background-image: url('https://source.unsplash.com/1600x900/?technology,code');">
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Hola, soy <span class="text-yellow-300">Tu Nombre Completo</span></h1>
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl font-light mb-8">
                 Desarrollador Web enfocado en crear experiencias digitales sólidas y escalables.<br>
                 Apasionado por la IA, el desarrollo frontend y la experiencia de usuario.
             </p>
+            <a href="#sobre-mi" 
+               class="inline-block bg-yellow-300 text-gray-900 font-medium py-3 px-6 rounded-full hover:bg-yellow-400 transition">
+               Conóceme más
+            </a>
         </div>
     </section>
 
     <!-- SOBRE MÍ -->
-    <section class="py-16" id="sobre-mi">
+    <section class="py-16 bg-white" id="sobre-mi">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Sobre Mí</h2>
-            <p class="text-lg leading-relaxed text-gray-700">
-                Soy un profesional con experiencia en el desarrollo de software full-stack, 
-                apasionado por la optimización de procesos y la creación de soluciones digitales 
-                que mejoran la vida de las personas. Mi motivación es mantenerme en constante aprendizaje, 
-                experimentando con nuevas tecnologías, abordando retos complejos y buscando siempre la excelencia técnica.
-            </p>
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-600 inline-block">Sobre Mí</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-8 items-center">
+                <div>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Soy un profesional con experiencia en el desarrollo de software full-stack, 
+                        apasionado por la optimización de procesos y la creación de soluciones digitales 
+                        que mejoran la vida de las personas. Mi motivación es mantenerme en constante aprendizaje, 
+                        experimentando con nuevas tecnologías, abordando retos complejos y buscando siempre la excelencia técnica.
+                    </p>
+                </div>
+                <!-- Puedes agregar una imagen tuya aquí -->
+                <div class="flex justify-center">
+                    <img 
+                      src="https://source.unsplash.com/400x400/?portrait" 
+                      alt="Foto de perfil" 
+                      class="w-48 h-48 rounded-full object-cover shadow-lg"
+                    >
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- INTERESES Y LOGROS -->
-    <section class="py-16 bg-white" id="intereses-logros">
+    <section class="py-16 bg-gray-50" id="intereses-logros">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Intereses y Logros</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-600 inline-block">Intereses y Logros</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-700">Intereses</h3>
-                    <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed space-y-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Intereses</h3>
+                    <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed space-y-2 ml-4">
                         <li>Desarrollo de interfaces web intuitivas y accesibles</li>
                         <li>Integración de APIs y servicios en la nube</li>
                         <li>Aprendizaje automático e Inteligencia Artificial</li>
@@ -77,13 +96,12 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-700">Logros</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Logros</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        He logrado implementar una aplicación de gestión interna que redujo 
-                        el tiempo de generación de informes mensuales en un 30%, aumentando la 
-                        eficiencia del equipo. Además, diseñé e implementé un sistema de autenticación 
-                        seguro con estándares modernos, mejorando la experiencia del usuario y 
-                        la seguridad de la plataforma.
+                        He logrado implementar una aplicación de gestión interna que redujo el tiempo 
+                        de generación de informes mensuales en un 30%, aumentando la eficiencia del equipo.
+                        Además, diseñé e implementé un sistema de autenticación seguro, elevando la confianza 
+                        y la satisfacción del usuario.
                     </p>
                 </div>
             </div>
@@ -91,15 +109,15 @@
     </section>
 
     <!-- PROYECTOS -->
-    <section class="py-16" id="proyectos">
+    <section class="py-16 bg-white" id="proyectos">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Proyectos</h2>
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-600 inline-block">Proyectos</h2>
             <p class="text-lg text-gray-700 mb-8">
                 Estos son algunos de los proyectos en los que he trabajado recientemente:
             </p>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Proyecto A -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col">
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col border-t-4 border-blue-600">
                     <h3 class="text-xl font-semibold mb-4 text-blue-700">Proyecto A</h3>
                     <p class="text-gray-700 flex-grow">
                         Aplicación web interna para gestión de tareas, construida con React y Node.js.
@@ -112,7 +130,7 @@
                 </div>
 
                 <!-- Proyecto B -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col">
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col border-t-4 border-blue-600">
                     <h3 class="text-xl font-semibold mb-4 text-blue-700">Proyecto B</h3>
                     <p class="text-gray-700 flex-grow">
                         Plataforma de e-commerce con integración de pasarela de pago y panel de administración.
@@ -125,7 +143,7 @@
                 </div>
 
                 <!-- Proyecto C -->
-                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col">
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col border-t-4 border-blue-600">
                     <h3 class="text-xl font-semibold mb-4 text-blue-700">Proyecto C</h3>
                     <p class="text-gray-700 flex-grow">
                         Sistema de análisis de datos con Python y visualizaciones interactivas, 
@@ -141,24 +159,35 @@
     </section>
 
     <!-- CV -->
-    <section class="py-16 bg-white" id="cv">
+    <section class="py-16 bg-gray-50" id="cv">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Currículum Vitae</h2>
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-600 inline-block">Currículum Vitae</h2>
             <p class="text-lg text-gray-700 mb-4">
-                Puedes descargar mi CV para ver mi experiencia laboral detallada, 
-                mis habilidades técnicas, y mi trayectoria académica:
+                Descarga mi CV para ver mi experiencia laboral, habilidades técnicas y formación:
             </p>
-            <a href="cv.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded font-medium hover:bg-blue-700 transition">
+            <a href="cv.pdf" target="_blank" 
+               class="inline-block bg-blue-600 text-white px-6 py-3 rounded font-medium hover:bg-blue-700 transition">
                 Descargar CV (PDF)
             </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-800 text-gray-300 py-8">
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>© 2024 Tu Nombre - Contacto: <a href="mailto:tu.email@ejemplo.com" class="text-blue-400 hover:underline">tu.email@ejemplo.com</a></p>
+            <p class="text-sm">© 2024 Tu Nombre - Contacto: <a href="mailto:tu.email@ejemplo.com" class="text-blue-400 hover:underline">tu.email@ejemplo.com</a></p>
+            <div class="mt-4 space-x-2">
+                <!-- Agrega tus redes sociales si lo deseas -->
+                <a href="#" class="text-gray-400 hover:text-white inline-block">
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.61.59-2.48.7a4.4 4.4 0 0 0 1.94-2.41c-.86.51-1.82.86-2.84 1.06a4.38 4.38 0 0 0-7.46 4c-3.64-.18-6.87-1.93-9.03-4.58a4.37 4.37 0 0 0-.59 2.2 4.38 4.38 0 0 0 1.95 3.64 4.4 4.4 0 0 1-1.99-.55v.06a4.38 4.38 0 0 0 3.51 4.29 4.4 4.4 0 0 1-1.98.07 4.38 4.38 0 0 0 4.09 3.04A8.8 8.8 0 0 1 2 19.54a12.41 12.41 0 0 0 6.72 1.97c8.07 0 12.48-6.68 12.48-12.48v-.57A8.91 8.91 0 0 0 24 5.52a8.6 8.6 0 0 1-2.54.7z"></path></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white inline-block">
+                    <svg class="w-5 h-5 inline-block" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"><path d="M23.625 0H.375A.375.375 0 0 0 0 .375v23.25c0 .207.168.375.375.375h23.25a.375.375 0 0 0 .375-.375V.375A.375.375 0 0 0 23.625 0zM7.125 20.25H3.75V9h3.375v11.25zM5.438 7.688a1.969 1.969 0 1 1 0-3.938 1.969 1.969 0 0 1 0 3.938zm13.687 12.562h-3.375v-5.25c0-1.25-.031-2.875-1.75-2.875-1.75 0-2.02 1.375-2.02 2.781v5.344H8.625V9h3.25v1.531h.047c.453-.859 1.562-1.766 3.22-1.766 3.438 0 4.063 2.266 4.063 5.219v6.266z"></path></svg>
+                </a>
+                <!-- Añade más enlaces a redes si lo deseas -->
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
